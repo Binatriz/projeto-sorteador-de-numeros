@@ -2,7 +2,7 @@ let resultado;
 
 function verificar_Resposta(perguntaUsuario) {
     let respostaUsuario = parseFloat(prompt(perguntaUsuario));
-    while(isNaN(respostaUsuario) || respostaUsuario <= 0){
+    while (isNaN(respostaUsuario) || respostaUsuario <= 0) {
         respostaUsuario = parseFloat(prompt(perguntaUsuario + '\n Aceita-se somente números e que sejam maiores que 0'));
     }
     return respostaUsuario;
@@ -20,5 +20,9 @@ for (i = 0; i < qtdNumerosASortear; i++) {
     listaNumerosSorteados[i] = resultado;
 }
 console.log(listaNumerosSorteados);
-alert(`Resultado do Valor é ${listaNumerosSorteados}`);
-
+let numerosSorteados = '';
+for (i = 0; i < listaNumerosSorteados.length; i++) {
+    numerosSorteados += ('<br>' + listaNumerosSorteados[i] + '<br>');
+    console.log(numerosSorteados);
+}
+document.write(`Resultado do sorteio é: ${numerosSorteados}`);
