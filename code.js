@@ -1,6 +1,9 @@
 let resultado;
 
 function sortear() {
+
+    let quantidade;
+
     function verificar_Resposta(verificar_Variavel, pergunta_Usuario) {
         let respostaUsuario = verificar_Variavel(prompt(pergunta_Usuario));
         while (isNaN(respostaUsuario) || respostaUsuario <= 0) {
