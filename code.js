@@ -20,19 +20,26 @@ function sortear() {
 
     let listaNumerosSorteados = [];
 
-    while (fimIntervalo < inicioIntervalo) {
+    while (fimIntervalo <= inicioIntervalo) {
         fimIntervalo = verificar_Resposta(parseFloat, ate);
+        return document.getElementById('resultado').innerHTML = 'Coloque um número maior no fim do intervalo';
     }
     for (i = 0; i < qtdNumerosASortear; i++) {
         resultado = Math.floor(Math.random() * (fimIntervalo - inicioIntervalo) + 1) + inicioIntervalo;
         listaNumerosSorteados[i] = resultado;
     }
 
-    console.log(listaNumerosSorteados);
     let numerosSorteados = '';
     for (i = 0; i < listaNumerosSorteados.length; i++) {
         numerosSorteados += ('<br>' + listaNumerosSorteados[i] + '<br>');
     }
     let resposta = document.getElementById("resultado");
     resposta.innerHTML = (`Resultado do sorteio é: ${numerosSorteados}`);
+}
+
+function reiniciar(){
+    document.getElementById('quantidade').value = '';
+    document.getElementById('de').value = '';
+    document.getElementById('ate').value = '';
+    document.getElementById('resultado').innerHTML = 'Resultado: ';
 }
