@@ -2,7 +2,9 @@ let resultado;
 
 function sortear() {
 
-    let quantidade = document.getElementById("quantidade");
+    let quantidade = parseInt(document.getElementById("quantidade"));
+    let de = parseFloat(document.getElementById("de"));
+    let ate = parseFloat(document.getElementById("ate"));
 
     function verificar_Resposta(verificar_Variavel, pergunta_Usuario) {
         let respostaUsuario = verificar_Variavel(prompt(pergunta_Usuario));
