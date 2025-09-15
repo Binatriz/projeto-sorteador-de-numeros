@@ -25,7 +25,7 @@ Lista numerada do funcionamento do código:
 5. Exibe os números sorteados
 6. Permite limpar os campos e resultado
 
-### Realizando uma Tabela
+### Funções
 
 Função | Descrição | Parâmetros
 ---|---|---
@@ -33,4 +33,4 @@ sortear() | Lê inputs, valida e sorteia números aleatórios | Nenhum, usa inpu
 verificar_Resposta() | Valida se o número é maior que zero | Função conversora, valor para validar
 reiniciar() | Limpa os campos e o resultado | Nenhum
 
-Finalizando a tabela
+
